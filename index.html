@@ -9,58 +9,63 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<style>
-		
+		.side-by-side {
+			display: flex;
+			gap: 40px;
+			align-items: flex-start;
+		}
+		.side-by-side .text {
+			flex: 1;
+		}
+		.side-by-side .text p {
+			font-weight: normal;
+			font-size: 18px;
+		}
+		.side-by-side img {
+			width: 50%;
+			height: auto;
+		}
+
+		.dot-line {
+			display: flex;          /* 점과 ✧를 가로로 나란히 */
+			align-items: baseline;
+			gap: 8px;               /* 점과 ✧ 사이 간격 */
+			font-weight: normal;    /* h3가 굵게 나오지 않게 */
+		}
+		.dot-line .dots {
+			flex: 1;                /* 남는 폭을 전부 점이 차지 */
+			overflow: hidden;       /* 넘치는 점은 숨기기 */
+			white-space: nowrap;    /* 점이 다음 줄로 넘어가지 않게 */
+		}
+
+		@media (max-width: 700px) {
+			.side-by-side {
+				flex-direction: column-reverse;
+			}
+			.side-by-side img {
+				width: 100%;
+			}
+		}
 	</style>
 </head>
 <body>
 
 
-<h1> <sub>Yeonsoo</sub> <sup>Kim</sup><h1>
+<h1> <sub>Yeonsoo</sub> <sup>Kim</sup></h1>
 
 
 <br><br><br><br>
 
-	<img src="images/Main.gif" alt= "Me waiting" style="width:160px;height:160px;">
+	<img src="images/Main.gif" alt="Me waiting" style="width:160px;height:160px;">
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<style>
-    .side-by-side {
-      display: flex;
-      gap: 40px;
-      align-items: flex-start;
-    }
-    .side-by-side .text {
-      flex: 1;
-    }
-    .side-by-side .text p {
-      font-weight: normal;
-      font-size: 18px;
-    }
-    .side-by-side img {
-      width: 50%;
-      height: auto;
-    }
-
-    @media (max-width: 700px) {
-      .side-by-side {
-        flex-direction: column-reverse;
-      }
-      .side-by-side img {
-        width: 100%;
-      }
-    }
-  </style>
-
-</head>
-
-<body>
 
   <div class="side-by-side">
     <div class="text">
     	<p>Meine Arbeit begann im Jahr 2023 mit einem sehr persönlichen Ereignis. Eines Tages erhielt ich einen Brief von einer Lehrperson der alternativen Schule in Korea, die ich damals besuchte. Diese Schule war für mich mehr als nur ein Ort des Lernens. Sie war ein Ort des gemeinsamen Lebens, und die Menschen dort fühlten sich für mich oft mehr wie Familie an als meine eigene Familie.</p>
-    	<p> In diesem Brief wurde beschrieben, dass das Lernen für mich aufgrund bestimmter Gewohnheiten, die ich über längere Zeit wiederholt hatte, zunehmend schwierigergeworden sei. Am Ende des Briefes schrieb die Lehrperson: 
+    	<p> In diesem Brief wurde beschrieben, dass das Lernen für mich aufgrund bestimmter Gewohnheiten, die ich über längere Zeit wiederholt hatte, zunehmend schwieriger geworden sei. Am Ende des Briefes schrieb die Lehrperson: 
     	„Wenn du einige Monate außerhalb der Schule verbringst und dabei zu innerer Klarheit gelangst, kannst du zurückkehren und dein Lernen fortsetzen. Wenn nicht, könnte es für dein Leben hilfreicher sein, die Schule zu verlassen.“</p>
     	<p> Als ich den Brief las, erlebte ich einen Schock, den ich nur schwer in Worte fassen kann. Es fühlte sich an, als würde ich von einer großen Welle mitgerissen werden. Inmitten der vielen Gedanken und Gefühle, die auf mich einstürmten, konnte ich nichts anderes tun, als hilflos darin umherzutreiben. Ich konnte auf diesen Brief nicht antworten. Ich wusste nicht, wie ich mich selbst verstehen oder akzeptieren sollte, während ich kein Wort hervorbringen konnte. Danach kehrte ich zu meinen Eltern zurück und verbrachte eine lange Zeit damit, nahezu nichts zu tun, während ich mir immer wieder dieselbe Frage stellte:
     	„Möchte ich zur Schule zurückkehren oder nicht?“</p>
@@ -76,8 +81,10 @@
 
 <br><br><br>
 
-
-<h3>.................................................................................................................................................................................................................................................................................................  ✧</h3>
+<h3 class="dot-line">
+  <span class="dots">....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................</span>
+  <span class="star">✧</span>
+</h3>
 
 
 <br><br><br><br>
@@ -88,7 +95,7 @@
 <p>Ohne Titel, aber mit einem Brief</p>
 	<details>
 	<summary>weiter</summary>
-	<img src="images/Brief.jpg" alt= "ein Brief" style="width:700px; max-width:100%; height:auto;">
+	<img src="images/Brief.jpg" alt="ein Brief" style="width:700px; max-width:100%; height:auto;">
 
 	<ul>작업설명
 		
@@ -215,7 +222,7 @@
 <br>
 
 
-	<p>Zukunft, Gegendwart, Vergangenheit</p>
+	<p>Zukunft, Gegenwart, Vergangenheit</p>
 	<details>
 	<summary>weiter</summary>
 		<img src="">
@@ -249,7 +256,7 @@
 <br>
 
 
-<h3>Austellung</h3>
+<h3>Ausstellung</h3>
 
 
 <p>2026 Tag der Kunst</p>
@@ -271,7 +278,7 @@
 <h3>CV</h3>
 
 
-<p> 2026-   HFBK Dresden
+<p> 2026-   HFBK Dresden</p>
 
 
 <br>
@@ -285,8 +292,7 @@
 
 
 <h3>Book</h3>
-<li> <a href="https://product.kyobobook.co.kr/detail/S000214458557">연수가 유희는 이우준이랑 최현정하고</a>
-</li>
+<a href="https://product.kyobobook.co.kr/detail/S000214458557">연수가 유희는 이우준이랑 최현정하고</a>
 
 
 <br><br>
